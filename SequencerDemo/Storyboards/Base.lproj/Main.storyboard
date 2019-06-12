@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,123 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SequencerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="Jci-QC-Nnc">
+                                <rect key="frame" x="20" y="194" width="374" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-0U-8gH" customClass="BeatView" customModule="SequencerDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GGJ-6d-t0S"/>
+                                            <constraint firstAttribute="width" constant="50" id="fx0-NY-I62"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-Gf-Fma" customClass="BeatView" customModule="SequencerDemo" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6PS-Jp-wZB"/>
+                                            <constraint firstAttribute="width" constant="50" id="KEQ-hQ-Ext"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f11-Ko-D7c" customClass="BeatView" customModule="SequencerDemo" customModuleProvider="target">
+                                        <rect key="frame" x="216" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="27F-Xh-kuf"/>
+                                            <constraint firstAttribute="width" constant="50" id="c7p-ho-cbD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i64-Co-GhC" customClass="BeatView" customModule="SequencerDemo" customModuleProvider="target">
+                                        <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3ES-7E-Odg"/>
+                                            <constraint firstAttribute="width" constant="50" id="Fjw-Sp-BGu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IM7-y5-AxT"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="717-bw-iFb">
+                                <rect key="frame" x="36.5" y="428.5" width="134" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Quarter Note">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressQuarterNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0C-7x-aAV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyE-Ey-Rin">
+                                <rect key="frame" x="250" y="428.5" width="121" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Eighth Note">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressEighthNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwB-so-phn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAa-yp-Mtm">
+                                <rect key="frame" x="184" y="428.5" width="46" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fli-ET-4yp"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="teG-ZY-9fr">
+                                <rect key="frame" x="0.0" y="507.5" width="414" height="388.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RAa-yp-Mtm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6JQ-Kx-u7D"/>
+                            <constraint firstItem="teG-ZY-9fr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9KH-Dy-GLY"/>
+                            <constraint firstItem="Jci-QC-Nnc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8n-dI-T6M"/>
+                            <constraint firstItem="Jci-QC-Nnc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fo4-Ez-hV5"/>
+                            <constraint firstItem="717-bw-iFb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GcB-NV-I8r"/>
+                            <constraint firstItem="teG-ZY-9fr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PJ5-tI-Vxn"/>
+                            <constraint firstItem="717-bw-iFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="QSB-Tx-dVR"/>
+                            <constraint firstItem="HyE-Ey-Rin" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SHV-v3-O9o"/>
+                            <constraint firstItem="Jci-QC-Nnc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="fmh-aG-elm"/>
+                            <constraint firstItem="HyE-Ey-Rin" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="gHW-Gf-AEU"/>
+                            <constraint firstAttribute="bottom" secondItem="teG-ZY-9fr" secondAttribute="bottom" id="gyY-lF-hty"/>
+                            <constraint firstItem="RAa-yp-Mtm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m2x-pD-zju"/>
+                            <constraint firstItem="teG-ZY-9fr" firstAttribute="top" secondItem="RAa-yp-Mtm" secondAttribute="bottom" constant="40" id="pw6-e2-xTL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jci-QC-Nnc" secondAttribute="trailing" constant="20" id="wDT-91-ad0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="stopButton" destination="RAa-yp-Mtm" id="JGl-Da-vk7"/>
+                        <outlet property="textView" destination="teG-ZY-9fr" id="du0-fd-y8g"/>
+                        <outletCollection property="quarterNoteViews" destination="YqW-0U-8gH" collectionClass="NSMutableArray" id="9sW-ci-2mh"/>
+                        <outletCollection property="quarterNoteViews" destination="rdh-Gf-Fma" collectionClass="NSMutableArray" id="R8z-PS-RWn"/>
+                        <outletCollection property="quarterNoteViews" destination="f11-Ko-D7c" collectionClass="NSMutableArray" id="jWu-j9-AxJ"/>
+                        <outletCollection property="quarterNoteViews" destination="i64-Co-GhC" collectionClass="NSMutableArray" id="pJK-G8-cRN"/>
+                        <outletCollection property="playButtons" destination="717-bw-iFb" collectionClass="NSMutableArray" id="Uex-Wj-0UH"/>
+                        <outletCollection property="playButtons" destination="HyE-Ey-Rin" collectionClass="NSMutableArray" id="mCy-qd-iTQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
 </document>

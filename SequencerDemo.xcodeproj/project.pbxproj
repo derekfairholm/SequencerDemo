@@ -12,6 +12,11 @@
 		A3E824E722A580E7004F5C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E824E522A580E7004F5C51 /* Main.storyboard */; };
 		A3E824E922A580E9004F5C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E824E822A580E9004F5C51 /* Assets.xcassets */; };
 		A3E824EC22A580E9004F5C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E824EA22A580E9004F5C51 /* LaunchScreen.storyboard */; };
+		A3E824F922A99ABF004F5C51 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E824F822A99ABF004F5C51 /* AudioEngine.swift */; };
+		A3E824FF22A9AD17004F5C51 /* HS M1 Drums.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = A3E824FE22A9AD17004F5C51 /* HS M1 Drums.sf2 */; };
+		A3E8250A22AEC6F6004F5C51 /* Quarter Note.mid in Resources */ = {isa = PBXBuildFile; fileRef = A3E8250922AEC6F6004F5C51 /* Quarter Note.mid */; };
+		A3E8250E22AEC87F004F5C51 /* Eighth Note.mid in Resources */ = {isa = PBXBuildFile; fileRef = A3E8250D22AEC87F004F5C51 /* Eighth Note.mid */; };
+		A3E8251022B16EE3004F5C51 /* BeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E8250F22B16EE3004F5C51 /* BeatView.swift */; };
 		C098A2CBDB06B1E591E5B346 /* Pods_SequencerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F116849D73E2173765C7A4E /* Pods_SequencerDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,11 @@
 		A3E824E822A580E9004F5C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3E824EB22A580E9004F5C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3E824ED22A580E9004F5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3E824F822A99ABF004F5C51 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		A3E824FE22A9AD17004F5C51 /* HS M1 Drums.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HS M1 Drums.sf2"; sourceTree = "<group>"; };
+		A3E8250922AEC6F6004F5C51 /* Quarter Note.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Quarter Note.mid"; sourceTree = "<group>"; };
+		A3E8250D22AEC87F004F5C51 /* Eighth Note.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Eighth Note.mid"; sourceTree = "<group>"; };
+		A3E8250F22B16EE3004F5C51 /* BeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatView.swift; sourceTree = "<group>"; };
 		E191C34319F5DEC9E61E324A /* Pods-SequencerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequencerDemo.release.xcconfig"; path = "Target Support Files/Pods-SequencerDemo/Pods-SequencerDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +56,6 @@
 				0FE96944203C27488DDF2D7B /* Pods-SequencerDemo.debug.xcconfig */,
 				E191C34319F5DEC9E61E324A /* Pods-SequencerDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,14 +80,99 @@
 		A3E824E022A580E7004F5C51 /* SequencerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A3E824E122A580E7004F5C51 /* AppDelegate.swift */,
-				A3E824E322A580E7004F5C51 /* ViewController.swift */,
-				A3E824E522A580E7004F5C51 /* Main.storyboard */,
-				A3E824E822A580E9004F5C51 /* Assets.xcassets */,
-				A3E824EA22A580E9004F5C51 /* LaunchScreen.storyboard */,
-				A3E824ED22A580E9004F5C51 /* Info.plist */,
+				A3E824F322A99A5B004F5C51 /* Application Delegate */,
+				A3E824FA22A99AC3004F5C51 /* Models */,
+				A3E824F422A99A6B004F5C51 /* View Controllers */,
+				A3E8251122B16EEB004F5C51 /* Views */,
+				A3E824F522A99A7C004F5C51 /* Storyboards */,
+				A3E824F622A99A88004F5C51 /* Resources */,
+				A3E824F722A99A98004F5C51 /* Supporting Files */,
 			);
 			path = SequencerDemo;
+			sourceTree = "<group>";
+		};
+		A3E824F322A99A5B004F5C51 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A3E824E122A580E7004F5C51 /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		A3E824F422A99A6B004F5C51 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3E824E322A580E7004F5C51 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A3E824F522A99A7C004F5C51 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A3E824E522A580E7004F5C51 /* Main.storyboard */,
+				A3E824EA22A580E9004F5C51 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A3E824F622A99A88004F5C51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3E824FB22A9ACE5004F5C51 /* Audio MIDI Resources */,
+				A3E824E822A580E9004F5C51 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A3E824F722A99A98004F5C51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3E824ED22A580E9004F5C51 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3E824FA22A99AC3004F5C51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3E824F822A99ABF004F5C51 /* AudioEngine.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3E824FB22A9ACE5004F5C51 /* Audio MIDI Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3E8250022A9ADEC004F5C51 /* MIDI Files */,
+				A3E824FD22A9ACFE004F5C51 /* Sound Fonts */,
+			);
+			path = "Audio MIDI Resources";
+			sourceTree = "<group>";
+		};
+		A3E824FD22A9ACFE004F5C51 /* Sound Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A3E824FE22A9AD17004F5C51 /* HS M1 Drums.sf2 */,
+			);
+			path = "Sound Fonts";
+			sourceTree = "<group>";
+		};
+		A3E8250022A9ADEC004F5C51 /* MIDI Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3E8250D22AEC87F004F5C51 /* Eighth Note.mid */,
+				A3E8250922AEC6F6004F5C51 /* Quarter Note.mid */,
+			);
+			path = "MIDI Files";
+			sourceTree = "<group>";
+		};
+		A3E8251122B16EEB004F5C51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3E8250F22B16EE3004F5C51 /* BeatView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B98BDF97C564678F069590A6 /* Frameworks */ = {
@@ -122,6 +216,11 @@
 				TargetAttributes = {
 					A3E824DD22A580E7004F5C51 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -148,8 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E824FF22A9AD17004F5C51 /* HS M1 Drums.sf2 in Resources */,
+				A3E8250A22AEC6F6004F5C51 /* Quarter Note.mid in Resources */,
 				A3E824EC22A580E9004F5C51 /* LaunchScreen.storyboard in Resources */,
 				A3E824E922A580E9004F5C51 /* Assets.xcassets in Resources */,
+				A3E8250E22AEC87F004F5C51 /* Eighth Note.mid in Resources */,
 				A3E824E722A580E7004F5C51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E8251022B16EE3004F5C51 /* BeatView.swift in Sources */,
+				A3E824F922A99ABF004F5C51 /* AudioEngine.swift in Sources */,
 				A3E824E422A580E7004F5C51 /* ViewController.swift in Sources */,
 				A3E824E222A580E7004F5C51 /* AppDelegate.swift in Sources */,
 			);
@@ -336,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VL9QVTRX9;
-				INFOPLIST_FILE = SequencerDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SequencerDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VL9QVTRX9;
-				INFOPLIST_FILE = SequencerDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SequencerDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
